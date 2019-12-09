@@ -1,0 +1,29 @@
+{
+  "name": "with-typescript",
+  "description": "Frontend boilerplate with Next, Typescript, Redux, Redux-Saga, Scss, Styleguidst",
+  "author": {
+    "name": "joe122o",
+    "email": "jsh901220@gmail.com",
+    "url": "https://github.com/Joe1220/next-redux-scss-bs"
+  },
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "isomorphic-unfetch": "3.0.0",
+    "next": "^9.1.4",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.7.8",
+    "@types/react": "^16.9.3",
+    "@types/react-dom": "^16.9.1",
+    "typescript": "3.6.3"
+  },
+  "license": "ISC"
+}
