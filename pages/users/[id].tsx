@@ -1,10 +1,10 @@
 import * as React from "react"
 import { NextPageContext } from "next"
 
-import { User } from "../../src/interfaces"
-import Layout from "../../src/components/Layout"
-import ListDetail from "../../src/components/ListDetail"
-import { sampleFetchWrapper } from "../../src/utils/sample-api"
+import { User } from "src/interfaces"
+import Layout from "src/components/Layout"
+import ListDetail from "src/components/ListDetail"
+import { sampleFetchWrapper } from "src/utils/sample-api"
 
 type Props = {
   item?: User
