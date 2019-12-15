@@ -32,13 +32,17 @@ next기반의 frontend boilerplate 입니다.
 ```
 .
 ├── src
-│   ├── components        # component list.
+│   ├── @types             # d.ts file list
+│   ├── components         # component list.
 │   │     ├──  types.ts
 │   │     ├──  sagas.ts
 │   │     ├──  actions.ts
 │   │     ├──  index.tsx
-│   ├── interfaces        # 공유할 수 있는 type(todo move)
-│   ├── store             # redux store
-└── pages                 # next의 page 목록
+│   ├── interfaces         # 공유할 수 있는 type(todo move)
+│   ├── store              # redux store
+│   │     ├──  sagas.ts    # root reducer.
+│   │     ├──  reducer.ts  # rootReducer
+│   │     ├──  index.tsx   # create store root reducer and root saga
+└── pages                  # next의 page 목록
 
 ```
