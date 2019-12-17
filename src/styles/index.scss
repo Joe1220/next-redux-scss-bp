@@ -1,0 +1,13 @@
+@charset 'UTF-8';
+
+// import 구문으로 이루어진 main scss
+/* abstracts */
+@import "styles/abstracts/_variables.scss";
+@import "styles/abstracts/_mixin.scss";
+@import "styles/abstracts/_placeholders.scss";
+
+/* base */
+@import "styles/base/_reset.scss";
+@import "styles/base/_base.scss";
+
+/* components */

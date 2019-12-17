@@ -5,6 +5,7 @@ import { PersistGate } from "redux-persist/integration/react"
 import withRedux from "next-redux-wrapper"
 
 import initialStore, { PersistedStore } from "src/store"
+import "src/styles/index.scss"
 
 interface IProps {
   store: PersistedStore
