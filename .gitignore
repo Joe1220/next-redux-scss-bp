@@ -169,4 +169,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# ide
+.idea
+
 # End of https://www.gitignore.io/api/node,sass,react,macos,windows
