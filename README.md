@@ -27,11 +27,21 @@ next기반의 frontend boilerplate 입니다.
 
 [Styleguidist](https://github.com/styleguidist/react-styleguidist)
 
+### **- Testing**
+
+setting both enzyme, react-testing-library. you should select one(or both)
+
+[jest](https://jestjs.io/docs/en/getting-started.html), [react-testing-library](https://github.com/testing-library/react-testing-library), [enzyme](https://airbnb.io/enzyme/),
+[axios-mock-adapter](https://www.npmjs.com/package/axios-mock-adapter)
+
+---
+
 ## Structure
 
 ```
 .
 ├── src
+│   ├── setupTests.ts      # for react-testing-library
 │   ├── @types             # d.ts file list
 │   ├── components         # component list.
 │   │     ├──  types.ts
@@ -43,6 +53,12 @@ next기반의 frontend boilerplate 입니다.
 │   │     ├──  sagas.ts    # root reducer.
 │   │     ├──  reducer.ts  # rootReducer
 │   │     ├──  index.tsx   # create store root reducer and root saga
-└── pages                  # next의 page 목록
+├─── pages                 # next의 page 목록
+├──  next.config.js        # config next webpack
+├──  tsconfig.json         # config typescript compiler
+├──  tsconfig.paths.json   # config typescript import paths
+├──  jest.config.js        # config jest options
+├──  jest.config.js        # typescript compiler for jest.config.js file
+├──  enzyme.js             # for enzyme library
 
 ```
