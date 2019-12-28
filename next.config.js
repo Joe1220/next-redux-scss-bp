@@ -13,7 +13,7 @@ module.exports = withSass({
     importLoaders: 1,
     localIdentName: "[local]___[hash:base64:5]"
   },
-  sassLoaderOptions: {
+  sassOptions: {
     includePaths: [path.resolve(__dirname, "src"), path.resolve(__dirname, "pages")]
   }
 })
