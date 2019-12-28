@@ -172,4 +172,7 @@ $RECYCLE.BIN/
 # ide
 .idea
 
+# styleguidist
+styleguide
+
 # End of https://www.gitignore.io/api/node,sass,react,macos,windows

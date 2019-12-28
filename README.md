@@ -2,32 +2,53 @@
 
 next기반의 frontend boilerplate 입니다.
 
-## Skill Stack
+#### install
 
-### **- Language**
+```bash
+yarn
+```
+
+#### start
+
+```bash
+yarn start # project start
+yarn test  # project test
+yarn style # start styleguidist for project
+
+```
+
+---
+
+## ** Skill Stack**
+
+### - Language
 
 [Typescript](https://www.typescriptlang.org/), [Javascript](https://www.javascript.com/),
 [`React`](https://github.com/facebook/react)
 
-### **- State Management**
+### - State Management
 
 [Redux](https://github.com/reduxjs/redux),
 [Redux-Saga](https://github.com/redux-saga/redux-saga)
 
-### **- API Library**
+### - API Library
 
 [Axios](https://github.com/axios/axios),
 [SSE](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
 
-### **- CSS**
+### - CSS
 
 [Sass](https://github.com/sass/sass)
 
-### **- Style Guid**
+### - Design System
+
+[styleguidist](https://github.com/styleguidist/react-styleguidist)
+
+### - Style Guid
 
 [Styleguidist](https://github.com/styleguidist/react-styleguidist)
 
-### **- Testing**
+### - Testing
 
 setting both enzyme, react-testing-library. you should select one(or both)
 
@@ -36,18 +57,24 @@ setting both enzyme, react-testing-library. you should select one(or both)
 
 ---
 
-## Structure
+## **Structure**
 
-```
+참조: [atomic design](https://bradfrost.com/blog/post/atomic-web-design/)
+
+```bash
 .
 ├── src
 │   ├── setupTests.ts      # for react-testing-library
 │   ├── @types             # d.ts file list
-│   ├── components         # component list.
-│   │     ├──  types.ts
-│   │     ├──  sagas.ts
-│   │     ├──  actions.ts
-│   │     ├──  index.tsx
+│   ├── components
+│   │     ├──  atoms       # atom component list.
+│   │     ├──  molecules   # molecule component list.
+│   │     ├──  organisms   # organisms component list.
+│   │     ├──  templates   # template component list.
+│   │     │       ├──  types.ts
+│   │     │       ├──  sagas.ts
+│   │     │       ├──  actions.ts
+│   │     │       ├──  index.tsx
 │   ├── interfaces         # 공유할 수 있는 type(todo move)
 │   ├── store              # redux store
 │   │     ├──  sagas.ts    # root reducer.
@@ -60,5 +87,7 @@ setting both enzyme, react-testing-library. you should select one(or both)
 ├──  jest.config.js        # config jest options
 ├──  jest.config.js        # typescript compiler for jest.config.js file
 ├──  enzyme.js             # for enzyme library
-
+├──  styleguide.config.js  # for styleguidist library
+├── docs
+│   ├── webpack.config.js  # styleguidist설정을 위한 webpack
 ```

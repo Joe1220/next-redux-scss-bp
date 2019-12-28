@@ -2,11 +2,14 @@ import * as React from "react"
 
 import { User } from "src/interfaces"
 
-type ListDetailProps = {
+/**
+ * Column properties
+ */
+export interface ListDetailProps {
   item: User
 }
 
-const ListDetail: React.FunctionComponent<ListDetailProps> = ({ item: user }) => (
+const ListDetail: React.FC<ListDetailProps> = ({ item: user }) => (
   <div>
     <h1>Detail for {user.name}</h1>
     <p>ID: {user.id}</p>
