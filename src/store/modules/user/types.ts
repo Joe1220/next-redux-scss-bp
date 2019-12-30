@@ -18,6 +18,10 @@ export type User = {
   address: AddressType
 }
 
+export type UsersResponse = {
+  userList: User[]
+}
+
 export const GET_USER_REQUEST = "user/GET_USER_REQUEST"
 export const GET_USER_SUCCESS = "user/GET_USER_SUCCESS"
 export const GET_USER_FAILURE = "user/GET_USER_FAILURE"

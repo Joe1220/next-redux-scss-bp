@@ -5,4 +5,7 @@
 
 declare interface Error {
   code?: number
+  response: {
+    status: number
+  }
 }
