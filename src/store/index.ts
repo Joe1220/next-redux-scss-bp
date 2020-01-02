@@ -1,7 +1,6 @@
-import { createStore, applyMiddleware, Store, AnyAction } from "redux"
+import { createStore, applyMiddleware, Store, AnyAction, compose } from "redux"
 import createSagaMiddleware from "redux-saga"
 import { persistReducer, persistStore } from "redux-persist"
-import { composeWithDevTools } from "remote-redux-devtools"
 
 import rootReducer from "./reducer"
 import rootSaga from "./sagas"
@@ -13,10 +12,18 @@ export type PersistedStore = Store<any, AnyAction> & {
 const isClient = typeof window !== "undefined"
 const sagaMiddleware = createSagaMiddleware()
 // middleware list
-const middleware = [sagaMiddleware]
+const middlewares = [sagaMiddleware]
 
-const initStore = (reducer: any) =>
-  createStore(reducer, composeWithDevTools(applyMiddleware(...middleware)))
+const initStore = (reducer: any) => {
+  const composeEnhancers =
+    typeof window === "object" && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
+      ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
+          // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
+        })
+      : compose
+  const enhancer = composeEnhancers(applyMiddleware(...middlewares))
+  return createStore(reducer, enhancer)
+}
 
 export default () => {
   let _store: PersistedStore
