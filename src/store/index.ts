@@ -32,7 +32,8 @@ export default () => {
 
     const persistConfig = {
       key: "root",
-      storage
+      storage,
+      blacklist: ["user"]
     }
     const persistedReducer = persistReducer(persistConfig, rootReducer)
 

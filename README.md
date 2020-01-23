@@ -34,7 +34,7 @@ yarn style # start styleguidist for project
 ### - API Library
 
 [Axios](https://github.com/axios/axios),
-[SSE](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)
+[Socket.io](https://socket.io/)
 
 ### - CSS
 
