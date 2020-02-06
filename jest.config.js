@@ -11,6 +11,7 @@ module.exports = {
       diagnostics: true
     }
   },
+  setupFilesAfterEnv: ["./src/setupTests.ts"],
   snapshotSerializers: ["enzyme-to-json/serializer"],
   coveragePathIgnorePatterns: ["/node_modules/", "enzyme.js"],
   setupFilesAfterEnv: ["<rootDir>/enzyme.js"],
